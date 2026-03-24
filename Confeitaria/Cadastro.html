@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro - Tia Elza</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fffcfd;
+            color: #333;
+        }
+
+        nav {
+            background: #fae3f0;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .nav-casa1 {
+            max-width: 80%; 
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #000;
+        }
+
+        .nave {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nave li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nave li a:hover {
+            color: #ff69b4;
+        }
+
+        main {
+            margin: 40px 10% 50px 10%;
+        }
+
+        h1 {
+            color: #ff69b4; 
+            margin-bottom: 25px;
+            font-size: 2rem;
+            border-bottom: 2px solid #fae3f0;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        form {
+            background-color: #fffcfd;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px dashed #ffb6c1;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #fae3f0;
+            border-radius: 8px;
+            background-color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ff69b4;
+            box-shadow: 0 0 5px rgba(255, 105, 180, 0.2);
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            color: #888;
+            background-color: #fff;
+        }
+
+        .social-links {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #ff69b4;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ff1493;
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-casa1 {
+                flex-direction: column;
+                gap: 15px;
+            }
+            main {
+                margin: 20px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-casa1">
+            <img src="imagens/escrita.png" alt="Logo Tia Elza" class="logo" width="15%" onerror="this.style.display='none'; this.after('Tia Elza')">
+            <ul class="nave">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="bolo.html">Bolo</a></li> 
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Cadastro</h1>
+
+        <form action="#"> 
+            <fieldset> 
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Telefone / Celular</label>
+                    <input type="tel" id="tel" name="tel" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000">
+                </div>
+
+                <div class="form-group">
+                    <label for="endereço">Endereço de Entrega</label>
+                    <input type="text" id="endereço" name="endereço" placeholder="Rua, número, bairro">
+                </div>
+            </fieldset>
+
+            <fieldset> 
+                <div class="form-group">
+                    <label for="observações">Detalhes do Pedido ou Produto</label>
+                    <textarea id="observações" name="observações" placeholder="Descreva aqui o doce dos seus sonhos..." maxlength="200"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Enviar Cadastro</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://wa.me/5500000000000" target="_blank">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.371a9.945 9.945 0 004.779 1.21h.005c5.506 0 9.989-4.478 9.99-9.984A9.97 9.97 0 0012.012 2zm5.835 14.12c-.255.715-1.507 1.306-2.076 1.39-.569.083-1.138.12-3.832-.977a11.53 11.53 0 01-4.81-4.22c-.62-.823-1.03-1.832-1.03-2.887 0-1.12.585-1.666.794-1.892.21-.226.46-.283.61-.283.15 0 .299.001.431.008.14.007.31-.053.486.368.175.42.6 1.465.653 1.577.052.112.087.244.013.394-.074.15-.112.244-.225.375-.112.131-.236.293-.337.394-.112.112-.23.234-.098.463a7.41 7.41 0 001.353 1.685 6.64 6.64 0 001.96 1.21c.225.112.359.098.494-.053.135-.15.58-.675.734-.903.154-.225.307-.188.52-.113.214.075 1.355.638 1.59 1.55l.001.001z"/></svg>
+                WhatsApp
+            </a>
+            
+        </div>
+        <p>&copy; 2022 Guloseimas da Tia Elza - Delícias feitas com amor</p>
+    </footer>
+
+</body>
+</html>
